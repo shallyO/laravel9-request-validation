@@ -28,4 +28,15 @@ class StoreFormValidation extends FormRequest
             'email' => 'required|max:35'
         ];
     }
+
+    public function messages()
+    {
+        #customize messages per error
+      return
+          [
+            'name.required' => 'Name is required',
+            'name.max' => 'Name is more than 20 characters',
+            'email.required' => 'Email is required'
+          ];
+    }
 }

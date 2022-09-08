@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreFormValidation;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -11,12 +12,9 @@ class FormController extends Controller
         return view('form');
     }
 
-    public function store(Request $request){
+    public function store(StoreFormValidation $request){
 
-        $request->validate([
-            'name' => 'required|max:20',
-            'email' => 'required|max:35'
-        ]);
+
 
     }
 }

@@ -13,7 +13,7 @@ class StoreFormValidation extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class StoreFormValidation extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:20',
+            'email' => 'required|max:35'
         ];
     }
 }
